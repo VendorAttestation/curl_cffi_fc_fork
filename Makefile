@@ -2,7 +2,7 @@
 SHELL := bash
 
 # this is the upstream libcurl-impersonate version
-VERSION := 0.8.2
+VERSION := 0.8.2-fc
 CURL_VERSION := curl-8_7_1
 
 $(CURL_VERSION):
@@ -11,7 +11,7 @@ $(CURL_VERSION):
 	mv curl-$(CURL_VERSION) $(CURL_VERSION)
 
 curl-impersonate-$(VERSION)/chrome/patches: $(CURL_VERSION)
-	curl -L "https://github.com/lexiforest/curl-impersonate/archive/refs/tags/v$(VERSION).tar.gz" \
+	curl -L "https://github.com/VendorAttestation/curl-impersonate-fix-fc/archive/refs/tags/v$(VERSION).tar.gz" \
 		-o "curl-impersonate-$(VERSION).tar.gz"
 	tar -xf curl-impersonate-$(VERSION).tar.gz
 
